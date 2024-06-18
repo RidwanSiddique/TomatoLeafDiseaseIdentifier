@@ -9,10 +9,10 @@ import numpy as np
 IMAGE_SIZE = 256
 BATCH_SIZE = 32
 CHANNELS = 3
-EPOCHS = 1
+EPOCHS = 50
 
 # Load dataset
-dataset_path = "training\PlantVillage"
+dataset_path = "PlantVillage"
 dataset = keras.utils.image_dataset_from_directory(
     dataset_path,
     batch_size=BATCH_SIZE,
@@ -27,6 +27,7 @@ if len(dataset) == 0:
 # Get class names
 class_names = dataset.class_names
 print("Class names:", class_names)
+
 
 # Display images
 plt.figure(figsize=(10, 10))
@@ -62,6 +63,7 @@ def get_dataset_partitions_tf(ds, train_split = 0.8, val_split = 0.1, test_split
     return train_ds, val_ds, test_ds
 
 train_ds, val_ds, test_ds = get_dataset_partitions_tf(dataset)
+
 
 
 train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=tf.data.AUTOTUNE)
@@ -111,6 +113,7 @@ model = models.Sequential([
  ])
 
 model.build(input_shape=input_shape)
+model.summary( )
 
 model.compile(
     optimizer= 'adam',
@@ -148,7 +151,7 @@ plt.plot(range(EPOCHS), loss, label='Training Loss')
 plt.plot(range(EPOCHS), val_loss, label='Validation Loss')
 plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
-plt.show()
+##plt.show()
 
 
 for images_batch, labels_batch in test_ds.take(1):
