@@ -64,12 +64,9 @@ The graph below illustrates the training and validation loss. The training loss 
    ```
 4. Run the training script:
    ```bash
-   python train_model.py
+   python training/traiing.py
    ```
-5. Use the trained model for inference:
-   ```bash
-   python predict.py --image path/to/image.jpg
-   ```
+
 
 ## Installation
 Ensure you have Python 3.8 or above installed. Use the provided `requirements.txt` file to install necessary dependencies:
