@@ -43,7 +43,7 @@ The graph below shows how the training and validation accuracy evolved over the 
 #### Training and Validation Loss
 The graph below illustrates the training and validation loss. The training loss decreased consistently, demonstrating that the model minimized the error on the training set. The validation loss, on the other hand, fluctuated significantly, which might indicate overfitting or noise in the validation data.
 
-![Training and Validation Graphs]((https://raw.githubusercontent.com/RidwanSiddique/TomatoLeafDiseaseIdentifier/blob/35cc0b3610ad93ad2cd44d33bfc56e716b9f3ec4/training/Figure_2.png))
+![Training and Validation Graphs]((https://github.com/RidwanSiddique/TomatoLeafDiseaseIdentifier/blob/35cc0b3610ad93ad2cd44d33bfc56e716b9f3ec4/training/Figure_2.png))
 
 ### Insights:
 - The training process shows strong learning on the training set, as indicated by high accuracy and low loss.
